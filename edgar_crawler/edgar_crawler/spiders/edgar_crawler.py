@@ -37,6 +37,14 @@ class EdgarCrawler(CrawlSpider):
     )
 
     def create_items(self, response):
+        """ This function parses the report XML. Some contracts for testing are mingled
+            with this docstring. This is not an ideal way of testing, but it is something.
+
+            @url https://www.sec.gov/Archives/edgar/data/1166559/000110465919045945/a19-17161_1informationtable.xml
+            @returns items 16
+            @returns requests 0 0
+            @scrapes issuer class_title cusip value shrs_prn_amt shrs_prn_type investment_discretion vote_auth_sole vote_auth_shared vote_auth_none
+        """
         soup = bs.BeautifulSoup(response.body,'lxml')
         table_rows = soup.find_all('infotable')
 
