@@ -92,7 +92,7 @@ ROBOTSTXT_OBEY = False
 
 BASE_URL = "https://www.sec.gov/cgi-bin/browse-edgar?"
 BASE_PARAMS = {
-    "CIK": "0001037766",
+    "CIK": raw_input("Please enter a CIK or ticker symbol "),
     "owner": "exclude",
     "action": "getcompany",
     "find": "search",
