@@ -27,6 +27,7 @@ class EdgarCrawler(CrawlSpider):
         "vote_auth_shared",
         "vote_auth_none",
     ],
+    'FEED_URI' : BASE_PARAMS['CIK']+'_holdings.tsv'
   }
 
     rules = (

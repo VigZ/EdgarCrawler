@@ -92,7 +92,7 @@ ROBOTSTXT_OBEY = False
 
 BASE_URL = "https://www.sec.gov/cgi-bin/browse-edgar?"
 BASE_PARAMS = {
-    "CIK": "0001086364",
+    "CIK": "0001037766",
     "owner": "exclude",
     "action": "getcompany",
     "find": "search",
@@ -100,7 +100,6 @@ BASE_PARAMS = {
 }
 
 FEED_FORMAT = "csv"
-FEED_URI = "output.tsv"
 
 FEED_EXPORTERS = {
     'csv': 'edgar_crawler.exporters.TsvSeperator'
